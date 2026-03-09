@@ -23,6 +23,7 @@ public class BorderLayoutDemo {
 
         //panel that contains option buttons on the left side
         JPanel westPanel = new JPanel();
+        //Arrange buttons vertiically with spacing
         westPanel.setLayout(new GridLayout(3, 1, 5, 5)); // 3 rows, 1 column, spacing
 
         JButton btn1 = new JButton("Option 1");
