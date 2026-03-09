@@ -21,6 +21,7 @@ public class BorderLayoutDemo {
         titleLabel.setFont(new Font("Arial", Font.BOLD, 18));
         Borderframe.add(titleLabel, BorderLayout.NORTH);
 
+        //panel that contains option buttons on the left side
         JPanel westPanel = new JPanel();
         westPanel.setLayout(new GridLayout(3, 1, 5, 5)); // 3 rows, 1 column, spacing
 
