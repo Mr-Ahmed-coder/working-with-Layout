@@ -16,6 +16,7 @@ public class BorderLayoutDemo {
         JFrame borderFrame = new JFrame("BorderLayout Demo");
         borderFrame.setSize(600, 400);
         borderFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        //manager for the frame
         borderFrame.setLayout(new BorderLayout());
 
         JLabel titleLabel = new JLabel("Application Title", JLabel.CENTER);
