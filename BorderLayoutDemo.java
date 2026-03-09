@@ -20,6 +20,7 @@ public class BorderLayoutDemo {
         borderFrame.setLayout(new BorderLayout());
         /// Title displayed at the top of the application
         JLabel titleLabel = new JLabel("Application Title", JLabel.CENTER);
+        //set font style and size for the title
         titleLabel.setFont(new Font("Arial", Font.BOLD, 18));
         borderFrame.add(titleLabel, BorderLayout.NORTH);
 
