@@ -12,14 +12,15 @@ public class BorderLayoutDemo {
     }
 
     public JFrame CreateBorderFrame(){
-        JFrame Borderframe = new JFrame("BorderLayout Demo");
-        Borderframe.setSize(600, 400);
-        Borderframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        Borderframe.setLayout(new BorderLayout());
+
+        JFrame borderFrame = new JFrame("BorderLayout Demo");
+        borderFrame.setSize(600, 400);
+        borderFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        borderFrame.setLayout(new BorderLayout());
 
         JLabel titleLabel = new JLabel("Application Title", JLabel.CENTER);
         titleLabel.setFont(new Font("Arial", Font.BOLD, 18));
-        Borderframe.add(titleLabel, BorderLayout.NORTH);
+        borderFrame.add(titleLabel, BorderLayout.NORTH);
 
         JPanel westPanel = new JPanel();
         westPanel.setLayout(new GridLayout(3, 1, 5, 5)); // 3 rows, 1 column, spacing
@@ -32,17 +33,17 @@ public class BorderLayoutDemo {
         westPanel.add(btn2);
         westPanel.add(btn3);
 
-        Borderframe.add(westPanel, BorderLayout.WEST);
+        borderFrame.add(westPanel, BorderLayout.WEST);
 
         JTextArea textArea = new JTextArea();
         JScrollPane scrollPane = new JScrollPane(textArea);
 
-        Borderframe.add(scrollPane, BorderLayout.CENTER);
+        borderFrame.add(scrollPane, BorderLayout.CENTER);
 
         JButton submitButton = new JButton("Submit");
-        Borderframe.add(submitButton, BorderLayout.SOUTH);
+        borderFrame.add(submitButton, BorderLayout.SOUTH);
 
-        Borderframe.setVisible(true);
-        return Borderframe;
+        borderFrame.setVisible(true);
+        return borderFrame;
     }
 }
