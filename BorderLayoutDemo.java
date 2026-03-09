@@ -2,6 +2,10 @@ import javax.swing.*;
 import java.awt.*;
 
 public class BorderLayoutDemo {
+//    JButton ButtonOne;
+//    JButton ButtonTwo;
+//    JButton ButtonThree;
+//    JButton ButtonFour;
 
     public BorderLayoutDemo() {
         this.CreateBorderFrame();
