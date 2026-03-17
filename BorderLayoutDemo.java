@@ -2,6 +2,8 @@ import javax.swing.*;
 import java.awt.*;
 
 public class BorderLayoutDemo {
+        //button variables
+
     JButton ButtonOne;
     JButton ButtonTwo;
     JButton ButtonThree;
