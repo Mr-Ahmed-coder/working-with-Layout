@@ -12,7 +12,9 @@ public class BorderLayoutDemo {
     // JPanel JPanelOne;
         private JPanel buttonPanel;
 
-    JButton Button1;
+    // JButton Button1;
+        private JScrollPane scrollPane;
+
     JButton Button2;
     JButton Button3;
     JButton SubmitButton;
