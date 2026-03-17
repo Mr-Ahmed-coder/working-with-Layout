@@ -3,18 +3,10 @@ import java.awt.*;
 
 
 public class BorderLayoutDemo {
-    
-    // JFrame BorderFrame;
-    private JFrame borderFrame;
-    // JLabel JLabelOne;
-     private JLabel titleLabel;
-
-    // JPanel JPanelOne;
-        private JPanel buttonPanel;
-
-    // JButton Button1;
-        private JScrollPane scrollPane;
-
+    JFrame BorderFrame;
+    JLabel JLabelOne;
+    JPanel JPanelOne;
+    JButton Button1;
     JButton Button2;
     JButton Button3;
     JButton SubmitButton;
@@ -25,7 +17,7 @@ public class BorderLayoutDemo {
         this.createJFrame();
     }
 
-    public JFrame createJFrame() {
+    public void createJFrame() {
         BorderFrame = new JFrame("BorderLayout Demo");
         BorderFrame.setSize(600, 400);
         BorderFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -36,7 +28,6 @@ public class BorderLayoutDemo {
         BorderFrame.add(this.createSubmitButton(), BorderLayout.SOUTH);
 
         BorderFrame.setVisible(true);
-        return BorderFrame;
     }
 
     public JLabel CreateJLabelOne() {
