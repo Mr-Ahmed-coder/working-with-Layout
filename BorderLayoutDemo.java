@@ -6,7 +6,8 @@ public class BorderLayoutDemo {
     JButton ButtonTwo;
     JButton ButtonThree;
     JButton ButtonFour;
-/// /demonstrate gui using borderlayout in java sing
+    /// /demonstrate gui using borderlayout in java sing
+
     public BorderLayoutDemo() {
         this.CreateBorderFrame();
     }
