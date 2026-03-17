@@ -9,7 +9,9 @@ public class BorderLayoutDemo {
     // JLabel JLabelOne;
      private JLabel titleLabel;
 
-    JPanel JPanelOne;
+    // JPanel JPanelOne;
+        private JPanel buttonPanel;
+
     JButton Button1;
     JButton Button2;
     JButton Button3;
