@@ -1,55 +1,84 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class BorderLayoutDemo {
-        //button variables
 
-    JButton ButtonOne;
-    JButton ButtonTwo;
-    JButton ButtonThree;
-    JButton ButtonFour;
-    /// /demonstrate gui using borderlayout in java sing
+public class BorderLayoutDemo {
+    JFrame BorderFrame;
+    JLabel JLabelOne;
+    JPanel JPanelOne;
+    JButton Button1;
+    JButton Button2;
+    JButton Button3;
+    JButton SubmitButton;
+    JScrollPane ScrollPaneOne;
+
 
     public BorderLayoutDemo() {
-        this.CreateBorderFrame();
+        this.createJFrame();
     }
 
-    public JFrame CreateBorderFrame(){
+    public JFrame createJFrame() {
+        BorderFrame = new JFrame("BorderLayout Demo");
+        BorderFrame.setSize(600, 400);
+        BorderFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        JFrame borderFrame = new JFrame("BorderLayout Demo");
-        borderFrame.setSize(600, 400);
-        borderFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        //manager for the frame
-        borderFrame.setLayout(new BorderLayout());
-        /// Title displayed at the top of the application
-        JLabel titleLabel = new JLabel("Application Title", JLabel.CENTER);
-        //set font style and size for the title
-        titleLabel.setFont(new Font("Arial", Font.BOLD, 18));
-        borderFrame.add(titleLabel, BorderLayout.NORTH);
+        BorderFrame.add(this.CreateJLabelOne(), BorderLayout.NORTH);
+        BorderFrame.add(this.createJPanel(), BorderLayout.WEST);
+        BorderFrame.add(this.createJScrollPane(), BorderLayout.CENTER);
+        BorderFrame.add(this.createSubmitButton(), BorderLayout.SOUTH);
 
-        //panel that contains option buttons on the left side
-        JPanel westPanel = new JPanel();
-        westPanel.setLayout(new GridLayout(3, 1, 5, 5)); // 3 rows, 1 column, spacing
+        BorderFrame.setVisible(true);
+        return BorderFrame;
+    }
 
-        JButton btn1 = new JButton("Option 1");
-        JButton btn2 = new JButton("Option 2");
-        JButton btn3 = new JButton("Option 3");
+    public JLabel CreateJLabelOne() {
+        JLabelOne = new JLabel();
+        JLabelOne.setText("Application Title");
+        JLabelOne.setHorizontalAlignment(JLabel.CENTER);
+        return JLabelOne;
+    }
 
-        westPanel.add(btn1);
-        westPanel.add(btn2);
-        westPanel.add(btn3);
+    public JPanel createJPanel() {
+        JPanelOne = new JPanel();
+        JPanelOne.setLayout(new GridLayout(3,1));
+        JPanelOne.setBorder(BorderFactory.createEmptyBorder());
 
-        borderFrame.add(westPanel, BorderLayout.WEST);
+        JPanelOne.add(this.CreateButtOne());
+        JPanelOne.add(this.CreateButtonTwo());
+        JPanelOne.add(this.CreateButtonThree());
+        return JPanelOne;
+    }
 
+    public JButton CreateButtOne() {
+        Button1 = new JButton();
+        Button1.setText("Option 1");
+        return Button1;
+    }
+
+    public JButton CreateButtonTwo() {
+        Button2 = new JButton();
+        Button2.setText("Option 2");
+        return Button2;
+    }
+
+    public JButton CreateButtonThree() {
+        Button3 = new JButton();
+        Button3.setText("Option 3");
+        return Button3;
+    }
+
+    public JScrollPane createJScrollPane() {
         JTextArea textArea = new JTextArea();
-        JScrollPane scrollPane = new JScrollPane(textArea);
+        ScrollPaneOne = new JScrollPane(textArea);
 
-        borderFrame.add(scrollPane, BorderLayout.CENTER);
+        return ScrollPaneOne;
+    }
 
-        JButton submitButton = new JButton("Submit");
-        borderFrame.add(submitButton, BorderLayout.SOUTH);
-
-        borderFrame.setVisible(true);
-        return borderFrame;
+    public JButton createSubmitButton() {
+        SubmitButton = new JButton();
+        SubmitButton.setText("Submit");
+        return SubmitButton;
     }
 }
+
+
