@@ -3,8 +3,12 @@ import java.awt.*;
 
 
 public class BorderLayoutDemo {
-    JFrame BorderFrame;
-    JLabel JLabelOne;
+    
+    // JFrame BorderFrame;
+    private JFrame borderFrame;
+    // JLabel JLabelOne;
+     private JLabel titleLabel;
+
     JPanel JPanelOne;
     JButton Button1;
     JButton Button2;
